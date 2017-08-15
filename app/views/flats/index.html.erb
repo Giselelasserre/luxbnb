@@ -1,0 +1,20 @@
+<%= render "shared/banner" %>
+<%= render "form" %>
+<div class="container">
+  <div class="row">
+    <% @flats.each do |flat| %>
+    <div class="col-sm-6">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),  url('<%= cl_image_path flat.picture, height: 300, width: 400, crop: :fill %>')">
+        <% flat.doses.each do |dose| %>
+        <div class="card-category"><%= dose.amount %></div>
+        <% end %>
+        <div class="card-description">
+          <h2><%= flat.name %></h2>
+
+        </div>
+        <%= link_to "", flat_path(flat), class: "card-link" %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
