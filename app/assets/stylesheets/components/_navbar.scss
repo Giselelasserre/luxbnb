@@ -32,17 +32,20 @@
 /* Basic navbar item */
 .navbar-wagon-item {
   cursor: pointer;
-  padding: 0 20px;
+  padding: 25px 20px;
 }
 
 /* Navbar link */
 .navbar-wagon-link {
   color: #616668;
   font-size: 14px;
+  transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
+  color: #fff;
   text-decoration: none;
+  background: #c1a2bf;
 }
 
 /* Dropdown menu */
