@@ -1,16 +1,12 @@
 <%= render "shared/banner" %>
-<%= render "form" %>
+<%#= render "form" %>
 <div class="container">
   <div class="row">
     <% @flats.each do |flat| %>
     <div class="col-sm-6">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),  url('<%= cl_image_path flat.picture, height: 300, width: 400, crop: :fill %>')">
-        <% flat.doses.each do |dose| %>
-        <div class="card-category"><%= dose.amount %></div>
-        <% end %>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),  url('<%#= cl_image_path homestyle.picture, height: 300, width: 400, crop: :fill %>')">
         <div class="card-description">
           <h2><%= flat.name %></h2>
-
         </div>
         <%= link_to "", flat_path(flat), class: "card-link" %>
       </div>
@@ -18,3 +14,34 @@
     <% end %>
   </div>
 </div>
+
+<!-- coordinate display -->
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+      var coord = <%= raw @flats.to_json %>;
+      alert('Flat coordinates are ' + coord.lat + ', ' + coord.lng);
+    });
+  <% end %>
+<% end %>
+
+<div id="map" style="width: 100%; height: 600px;"></div>
+
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+      var handler = Gmaps.build('Google');
+      handler.buildMap({ internal: { id: 'map' } }, function() {
+        markers = handler.addMarkers(<%= raw @hash.to_json %>);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+        if (markers.length == 0) {
+          handler.getMap().setZoom(2);
+        } else if (markers.length == 1) {
+          handler.getMap().setZoom(14);
+        }
+      });
+    });
+  <% end %>
+<% end %>
+

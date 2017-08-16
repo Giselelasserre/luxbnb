@@ -10,8 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+Schema.define(version: 20170816142757) do
 
 ActiveRecord::Schema.define(version: 20170815182800) do
+
+
 
 
   # These are extensions that must be enabled in order to support this database
@@ -25,6 +28,10 @@ ActiveRecord::Schema.define(version: 20170815182800) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "title"
+    t.string   "name"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "address"
   end
 
 
