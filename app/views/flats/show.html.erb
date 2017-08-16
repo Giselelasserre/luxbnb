@@ -20,4 +20,14 @@
   </div>
   </div>
 
+<!-- added for google maps -->
+<script>
+    <%= javascript_tag do %>
+  $(document).ready(function() {
+    alert('<%= @alert_message %>');
+  });
+<% end %>
+</script>
+
+
 
