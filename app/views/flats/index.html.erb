@@ -19,4 +19,13 @@
   </div>
 </div>
 
+<!-- coordinate display -->
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+      var coord = <%= raw @flats.to_json %>;
+      alert('Flat coordinates are ' + coord.lat + ', ' + coord.lng);
+    });
+  <% end %>
+<% end %>
 

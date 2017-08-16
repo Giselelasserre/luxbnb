@@ -9,7 +9,6 @@ class FlatsController < ApplicationController
     @alert_message = "You are viewing #{@flat.name}"
     @flat_coordinates = { lat: @flat.latitude, lng: @flat.longitude }
   end
-  end
 
   def new
     @flat= Flat.new
