@@ -2,31 +2,31 @@
 
 
 <div class="container">
-<img src='https://kitt.lewagon.com/placeholder/users/ssaunier' class="avatar"/>
+  <img src='https://kitt.lewagon.com/placeholder/users/ssaunier' class="avatar"/>
   <div class="row">
     <div class="col-md-8">
-    <div> <strong> <%= @flat.title %> </strong> </div>
+      <div> <strong> <%= @flat.title %> </strong> </div>
       <%= @flat.description%> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet distinctio, labore unde non iure autem cum et accusamus molestiae eaque facilis dolorum cumque aspernatur eum dolores sapiente pariatur, fugiat quidem.
     </div>
     <div class="col-md-4">
-    <div class="price">
-      <%= @flat.price %>€ per night
-    </div>
-    <div>
-    <%= image_tag "calendar.png", class: "calendar" %>
-      <button type="submit" class="btn btn-yours"> Book </button>
-    </div>
+      <div class="price">
+        <%= @flat.price %>€ per night
+      </div>
+      <div>
+        <%= image_tag "calendar.png", class: "calendar" %>
+        <button type="submit" class="btn btn-yours"> Book </button>
+      </div>
     </div>
   </div>
-  </div>
+</div>
 
 <!-- added for google maps -->
 <script>
-    <%= javascript_tag do %>
+  <%= javascript_tag do %>
   $(document).ready(function() {
     alert('<%= @alert_message %>');
   });
-<% end %>
+  <% end %>
 </script>
 
 
