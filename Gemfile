@@ -19,6 +19,8 @@ gem 'simple_form'
 gem 'uglifier'
 
 gem 'omniauth-facebook'
+#GEMS ADDED BY ARMANDO
+gem "geocoder"
 
 gem 'better_errors'
 gem 'binding_of_caller'
