@@ -6,6 +6,9 @@
   margin: 0;
   text-align: center;
   color: white;
+  top: 72px;
+  position: fixed;
+  width: 100%;
 }
 .alert-info {
   background: $green;
@@ -13,3 +16,6 @@
 .alert-warning {
   background: $red;
 }
+
+
+// # min-height: calc(100vh - 172px);
