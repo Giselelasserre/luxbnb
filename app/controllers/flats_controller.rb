@@ -6,6 +6,8 @@ class FlatsController < ApplicationController
 
   def show
     @flat = Flat.find(params[:id])
+    @alert_message = "You are viewing #{@flat.name}"
+  end
   end
 
   def new
