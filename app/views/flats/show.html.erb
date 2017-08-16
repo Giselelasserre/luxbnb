@@ -1,5 +1,5 @@
-<div class= "banner" style="background-image: url(<%= image_path "flat2.jpg" %>);"> </div>
-
+<div class= "banner" style="backgroundge: url(<%= image_path "flat2.jpg" %>);"> </div>
+-ima
 
 <div class="container">
   <img src='https://kitt.lewagon.com/placeholder/users/ssaunier' class="avatar"/>
@@ -20,29 +20,11 @@
   </div>
 </div>
 
-<!-- added for google maps -->
-<script>
-  <%= javascript_tag do %>
-  $(document).ready(function() {
-    alert('<%= @alert_message %>');
-  });
-  <% end %>
-</script>
-
-<!-- google maps js script -->
-<% content_for(:after_js) do %>
-  <%= javascript_tag do %>
-    $(document).ready(function() {
-      alert('<%= @alert_message %>');
-    });
-  <% end %>
-<% end %>
-
 <!-- showing the coordiates -->
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
     $(document).ready(function() {
-      var coord = <%= raw @flat.to_json %>;
+      var coord = <%= raw @hash.to_json %>;
       alert('Flat coordinates are ' + coord.lat + ', ' + coord.lng);
     });
   <% end %>

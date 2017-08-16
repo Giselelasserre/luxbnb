@@ -22,6 +22,13 @@ gem 'omniauth-facebook'
 #GEMS ADDED BY ARMANDO
 gem "geocoder"
 
+gem "coffee-rails"
+gem "gmaps4rails"
+
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore"
+end
+
 gem 'better_errors'
 gem 'binding_of_caller'
 group :development, :test do
