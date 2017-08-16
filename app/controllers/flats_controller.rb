@@ -7,6 +7,7 @@ class FlatsController < ApplicationController
   def show
     @flat = Flat.find(params[:id])
     @alert_message = "You are viewing #{@flat.name}"
+    @flat_coordinates = { lat: @flat.latitude, lng: @flat.longitude }
   end
   end
 
