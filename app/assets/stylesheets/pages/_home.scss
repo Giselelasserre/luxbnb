@@ -7,7 +7,7 @@ body {
 
 .ctn {
   width: 100%;
-  background-size: cover;
+  padding: 0;
 }
 
 .search-bar {
@@ -154,4 +154,24 @@ body {
     opacity: 0.2;
 }
 
+.card-body.shanghai {
+  background-image: -webkit-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('shanghai.jpg');
+  background-image: -o-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('shanghai.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('shanghai.jpg');
+}
+.card-body.rio {
+  background-image: -webkit-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('rio de janeiro.jpg');
+  background-image: -o-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('rio de janeiro.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('rio de janeiro.jpg');
+}
+.card-body.berlin {
+  background-image: -webkit-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('berlin.jpg');
+  background-image: -o-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('berlin.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('berlin.jpg');
+}
 
+.banner-home {
+  background-image: -webkit-linear-gradient(bottom, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('mansion.jpg');
+  background-image: -o-linear-gradient(bottom, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('mansion.jpg');
+  background-image: linear-gradient(to top, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('mansion.jpg');
+}

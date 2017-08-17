@@ -1,6 +1,6 @@
 
 
-<div class="container ctn" style="background-image: linear-gradient(0deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('assets/mansion');">
+<div class="container ctn">
   <div class="banner-home" >
     <div class="banner-content">
       <h1>Luxury houses for rent</h1>
@@ -25,13 +25,14 @@
   <div class="row">
     <div class="col-xs-12 col-md-6 col-lg-4">
       <div class="card">
-        <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('assets/shanghai.jpg');">
+        <div class="card-body shanghai">
           <span class="card-category">Shanghai</span>
-            <div class="card-description">
-              <h2>Matheus's home</h2>
-              <p>Networking and Luxury in Shanghai</p>
-            </div>
-          <img class="card-user avatar avatar-large" src="assets/Matheus.jpg">
+          <div class="card-description">
+            <h2>Matheus's home</h2>
+            <p>Networking and Luxury in Shanghai</p>
+          </div>
+          <%= image_tag "Matheus.jpg", class: "card-user avatar avatar-large" %>
+          <!-- <img class="card-user avatar avatar-large" src="assets/Matheus.jpg"> -->
           <a class="card-link" href="#"></a>
           </div>
           <div class="card-footer">
@@ -46,13 +47,14 @@
     </div>
     <div class="col-xs-12 col-md-6 col-lg-4">
       <div class="card">
-        <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('assets/rio de janeiro.jpg');">
+        <div class="card-body rio">
             <span class="card-category">Rio</span>
             <div class="card-description">
               <h2>Gisele's Mansion</h2>
               <p>Just the best Rio VIP place</p>
             </div>
-            <img class="card-user avatar avatar-large" src="assets/gisele.jpg">
+            <%= image_tag "gisele.jpg", class: "card-user avatar avatar-large" %>
+            <!-- <img class="card-user avatar avatar-large" src="assets/gisele.jpg"> -->
             <a class="card-link" href="#"></a>
         </div>
           <div class="card-footer">
@@ -67,13 +69,14 @@
     </div>
     <div class="col-xs-12 col-md-6 col-lg-4">
       <div class="card">
-        <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('assets/berlin.jpg');">
+        <div class="card-body berlin">
           <span class="card-category">Berlin</span>
           <div class="card-description">
             <h2>Allan's Villa</h2>
             <p>The Gipsy King Lair </p>
           </div>
-          <img class="card-user avatar avatar-large" src="assets/alan.jpg">
+          <%= image_tag "alan.jpg", class: "card-user avatar avatar-large" %>
+          <!-- <img class="card-user avatar avatar-large" src="assets/alan.jpg"> -->
           <a class="card-link" href="#"></a>
         </div>
         <div class="card-footer">
