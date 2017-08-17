@@ -18,6 +18,8 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 
+gem "letter_opener", group: :development
+
 gem 'omniauth-facebook'
 #GEMS ADDED BY ARMANDO
 gem "geocoder"
