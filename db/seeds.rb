@@ -6,4 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Flat.create({description:"Beautiful", price:10_000, title: "Super Flat in Bangkok."})
+Flat.create(
+  description:"Nice flat",
+  price: 10_000,
+  title: "Super Flat in Bangkok.",
+  picture: "http://www.phadke-developers.com/images/projects/tathastu/large/2-bhk-bedroom-apartment-flat-for-sale-in-sangli.jpg",
+  address: "Av. 9 de julho, 2000, São Paulo, SP"
+)
