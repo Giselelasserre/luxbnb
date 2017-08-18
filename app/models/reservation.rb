@@ -1,5 +1,6 @@
-# class Reservation < ApplicationRecord
-#   belongs_to :user_id,  :flat_id
-#   validates presence: true
+class Reservation < ApplicationRecord
+  belongs_to :flat
+  belongs_to :user
 
-# end
+  validates :starting, :final, :flat, :user, presence: true
+end

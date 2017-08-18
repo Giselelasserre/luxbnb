@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Flat.create(
+  location: "Sao Paulo"
   description:"Nice flat",
   price: 10_000,
   title: "Super Flat in Bangkok.",

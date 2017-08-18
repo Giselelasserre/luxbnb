@@ -1,5 +1,4 @@
 <div class= "banner" style="backgroundge: url(<%= image_path "flat2.jpg" %>);"> </div>
--ima
 
 <div class="container">
   <img src='https://kitt.lewagon.com/placeholder/users/ssaunier' class="avatar"/>
@@ -12,24 +11,12 @@
       <div class="price">
         <%= @flat.price %>€ per night
       </div>
-      <div>
-        <%= image_tag "calendar.png", class: "calendar" %>
-        <button type="submit" class="btn btn-yours"> Book </button>
-      </div>
+      <%= render "reservations/form" %>
     </div>
   </div>
 </div>
 
 <!-- showing the coordiates -->
-<% content_for(:after_js) do %>
-  <%= javascript_tag do %>
-    $(document).ready(function() {
-      var coord = <%= raw @hash.to_json %>;
-      alert('Flat coordinates are ' + coord.lat + ', ' + coord.lng);
-    });
-  <% end %>
-<% end %>
-
 <div id="map" style="width: 100%; height: 600px;"></div>
 
 <% content_for(:after_js) do %>

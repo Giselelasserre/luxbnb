@@ -1,6 +1,11 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  has_many :reservations
+  has_many :reserved_flats, through: :reservations, class_name: "Flat", source: "flat"
+  has_many :flats
+  belongs_to :owner,  class_name: "User"
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   devise :omniauthable, omniauth_providers: [:facebook]

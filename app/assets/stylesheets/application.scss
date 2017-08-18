@@ -8,10 +8,11 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "bootstrap-datepicker";
 
 // Your CSS partials
 @import "layouts/index";
 @import "components/index";
 @import "components/footer";
 @import "pages/index";
-
+@import "flats/index";
