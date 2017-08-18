@@ -3,29 +3,38 @@
 <div class="container">
   <div class="row">
     <% @flats.each do |flat| %>
-    <div class="col-sm-6">
+    <div class="col-sm-12">
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),  url('<%#= cl_image_path homestyle.picture, height: 300, width: 400, crop: :fill %>')">
-        <div class="card-description">
-          <h2><%= flat.name %></h2>
+        <!-- <div class="card-description"> -->
+
+          <!-- <div class="card-block"> -->
+          <div class="card-body other">
+            <h4><%= flat.description %></h4>
+            <h5><%= flat.title %></h5>
+
+          </div>
+          <p><%= link_to "See more details" , flat_path(flat) %></p>
+          <% end %>
         </div>
-        <%= link_to "", flat_path(flat), class: "card-link" %>
       </div>
     </div>
-    <% end %>
   </div>
-</div>
+
+
 
 <!-- coordinate display -->
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
     $(document).ready(function() {
       var coord = <%= raw @flats.to_json %>;
-      alert('Flat coordinates are ' + coord.lat + ', ' + coord.lng);
     });
   <% end %>
 <% end %>
 
-<div id="map" style="width: 100%; height: 600px;"></div>
+
+
+
+<div id="map" style="width: 100%; height: 200px;"></div>
 
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>

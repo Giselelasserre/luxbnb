@@ -159,6 +159,13 @@ body {
   background-image: -o-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), image-url('shanghai.jpg');
   background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), image-url('shanghai.jpg');
 }
+
+.shanghai {
+  background-image: -webkit-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), image-url('shanghai.jpg');
+  background-image: -o-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), image-url('shanghai.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), image-url('shanghai.jpg');
+}
+
 .card-body.rio {
   background-image: -webkit-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), image-url('riodejaneiro.jpg');
   background-image: -o-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), image-url('riodejaneiro.jpg');
