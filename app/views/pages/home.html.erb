@@ -1,23 +1,21 @@
-
-
 <div class="container ctn">
   <div class="banner-home" >
     <div class="banner-content">
-      <h1>Luxury houses for rent</h1>
+      <h1 class="white">Luxury houses for rent</h1>
       <p>Because you are VIP.</p>
-        <form action="#" class="form-inline">
-         <input type="text" class="form-control input-lg search-bar" placeholder="Where?">
-         <input type="text" class="form-control input-lg search-bar" placeholder="When?">
+      <form action="/flats" class="form-inline">
+        <input type="text" name="location" class="form-control input-lg search-bar" placeholder="Where?">
         <select name="" id="" class="form-control input-lg search-bar">
-           <option value="1">1 guest</option>
-           <option value="2">2 guests</option>
-           <option value="3">3 guests</option>
-         </select>
-         <input type="submit" class="buton-purple" value="Search">
-       </form>
+          <option value="1">1 guest</option>
+          <option value="2">2 guests</option>
+          <option value="3">3 guests</option>
+        </select>
+        <input type="submit" class="buton-purple" value="Search">
+      </form>
     </div>
   </div>
 </div>
+
 <div class="container">
   <div class="text-center text-title">
     <p>Find the most luxury mansions</p>
@@ -32,51 +30,50 @@
             <p>Networking and Luxury in Shanghai</p>
           </div>
           <%= image_tag "Matheus.jpg", class: "card-user avatar avatar-large" %>
-          <!-- <img class="card-user avatar avatar-large" src="assets/Matheus.jpg"> -->
           <a class="card-link" href="#"></a>
+        </div>
+        <div class="card-footer">
+          <p>Posted on 22/11/19</p>
+          <div class="controls">
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-heart"></i></a>
+            <a href="#"><i class="fa fa-share"></i></a>
           </div>
-          <div class="card-footer">
-            <p>Posted on 22/11/19</p>
-            <div class="controls">
-              <a href="#"><i class="fa fa-star"></i></a>
-              <a href="#"><i class="fa fa-heart"></i></a>
-              <a href="#"><i class="fa fa-share"></i></a>
-            </div>
-          </div>
+        </div>
       </div>
     </div>
+
     <div class="col-xs-12 col-md-6 col-lg-4">
       <div class="card">
         <div class="card-body rio">
-            <span class="card-category">Rio</span>
-            <div class="card-description">
-              <h2>Gisele's Mansion</h2>
-              <p>Just the best Rio VIP place</p>
-            </div>
-            <%= image_tag "gisele.jpg", class: "card-user avatar avatar-large" %>
-            <!-- <img class="card-user avatar avatar-large" src="assets/gisele.jpg"> -->
-            <a class="card-link" href="#"></a>
+          <span class="card-category">Rio</span>
+          <div class="card-description">
+            <h2>Gisele's home</h2>
+            <p>Networking and Luxury in Barcelona</p>
+          </div>
+          <%= image_tag "gisele.jpg", class: "card-user avatar avatar-large" %>
+          <a class="card-link" href="#"></a>
         </div>
-          <div class="card-footer">
-            <p>Posted on 22/11/19</p>
-            <div class="controls">
-              <a href="#"><i class="fa fa-star"></i></a>
-              <a href="#"><i class="fa fa-heart"></i></a>
-              <a href="#"><i class="fa fa-share"></i></a>
-            </div>
+        <div class="card-footer">
+          <p>Posted on 22/11/19</p>
+          <div class="controls">
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-heart"></i></a>
+            <a href="#"><i class="fa fa-share"></i></a>
           </div>
         </div>
+      </div>
     </div>
+
     <div class="col-xs-12 col-md-6 col-lg-4">
       <div class="card">
         <div class="card-body berlin">
           <span class="card-category">Berlin</span>
           <div class="card-description">
-            <h2>Allan's Villa</h2>
-            <p>The Gipsy King Lair </p>
+            <h2>Alan's home</h2>
+            <p>Berlin great place</p>
           </div>
           <%= image_tag "alan.jpg", class: "card-user avatar avatar-large" %>
-          <!-- <img class="card-user avatar avatar-large" src="assets/alan.jpg"> -->
           <a class="card-link" href="#"></a>
         </div>
         <div class="card-footer">
@@ -91,6 +88,7 @@
     </div>
   </div>
 </div>
+
 
 
 

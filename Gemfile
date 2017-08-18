@@ -29,10 +29,12 @@ gem "gmaps4rails"
 
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
+  gem 'rails-assets-bootstrap-datepicker'
 end
 
 gem 'better_errors'
 gem 'binding_of_caller'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'

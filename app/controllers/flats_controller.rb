@@ -1,7 +1,14 @@
 class FlatsController < ApplicationController
-
   def index
-    @flats = Flat.where.not(latitude: nil, longitude: nil)
+    @flats = Flat.all
+
+    if params[:location].present?
+      @flats = @flats.near(params[:location], 20)
+    else
+      @flats = Flat.where.not(latitude: nil, longitude: nil)
+    end
+
+
     @hash = Gmaps4rails.build_markers(@flats) do |flat, marker|
       marker.lat flat.latitude
       marker.lng flat.longitude
@@ -10,6 +17,7 @@ class FlatsController < ApplicationController
   end
 
   def show
+    @reservation = Reservation.new
     @flat = Flat.find(params[:id])
     @alert_message = "You are viewing #{@flat.name}"
     @flat_coordinates = { lat: @flat.latitude, lng: @flat.longitude }
@@ -26,8 +34,13 @@ class FlatsController < ApplicationController
 
   def create
     @flat = Flat.new(flat_params)
-    @flat.save
-    redirect_to flat_path(@flat)
+    @flat.owner = current_user
+    if @flat.save
+      redirect_to flat_path(@flat), notice: "Sucessfully added!"
+    else
+      flash.now[:alert] = @flat.errors.full_messages.join(', ')
+      render "new"
+    end
   end
 
   def edit

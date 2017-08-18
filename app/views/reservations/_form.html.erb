@@ -1,0 +1,7 @@
+<%= simple_form_for [@flat, @reservation] do |f| %>
+  <%= f.input :starting, as: :string, input_html: { class: "datepicker" } %>
+  <%= f.input :final, as: :string, input_html: { class: "datepicker" }%>
+
+  <%= f.submit "Finish your Reservation", class: "btn btn-primary btn-lg btn-block" %>
+<% end %>
+

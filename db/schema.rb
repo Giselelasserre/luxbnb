@@ -10,12 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-Schema.define(version: 20170816142757) do
-
-ActiveRecord::Schema.define(version: 20170815182800) do
-
-
-
+ActiveRecord::Schema.define(version: 20170818190705) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,22 +23,26 @@ ActiveRecord::Schema.define(version: 20170815182800) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "title"
-    t.string   "name"
     t.float    "latitude"
     t.float    "longitude"
     t.string   "address"
+    t.string   "name"
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_flats_on_user_id", using: :btree
   end
-
 
   create_table "reservations", force: :cascade do |t|
     t.string   "dates"
     t.string   "references"
-    t.string   "user_id"
-    t.string   "flat_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "flat_id"
+    t.date     "starting"
+    t.date     "final"
+    t.index ["flat_id"], name: "index_reservations_on_flat_id", using: :btree
+    t.index ["user_id"], name: "index_reservations_on_user_id", using: :btree
   end
-
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -69,4 +68,7 @@ ActiveRecord::Schema.define(version: 20170815182800) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "flats", "users"
+  add_foreign_key "reservations", "flats"
+  add_foreign_key "reservations", "users"
 end
