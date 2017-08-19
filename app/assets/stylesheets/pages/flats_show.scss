@@ -6,6 +6,8 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
+  height: 500px;
+  width:100%;
 }
 
 .btn-yours {
@@ -18,6 +20,8 @@
   text-align: center;
   margin : 8px;
   transition: all ease 0.3s;
+  vertical-align: middle;
+
 }
 
 .avatar {
